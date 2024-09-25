@@ -1,0 +1,105 @@
+.details {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .details-header {
+    margin-bottom: 30px;
+  }
+  
+  .details-header h1 {
+    font-size: 2.2em;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .details-header button {
+    padding: 12px 25px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .details-header button:hover {
+    background-color: #0056b3;
+  }
+  
+  .details-header button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .details-main h2 {
+    font-size: 1.8em;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .details-input {
+    width: 100%;
+    padding: 15px;
+    font-size: 1em;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  .details-input:focus {
+    border-color: #007bff;
+  }
+  
+  .details-button {
+    padding: 12px 25px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .details-button:hover {
+    background-color: #218838;
+  }
+  
+  .details-error {
+    color: red;
+    font-size: 1.1em;
+    margin-top: 10px;
+  }
+  
+  .details-student {
+    text-align: left;
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+  }
+  
+  .details-student h3 {
+    font-size: 1.6em;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .details-student p {
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.6;
+    margin: 5px 0;
+  }
+  
