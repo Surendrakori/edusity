@@ -22,6 +22,7 @@
   .details-header button {
     padding: 12px 25px;
     background-color: #007bff;
+    margin: 10px  ;
     color: white;
     border: none;
     border-radius: 5px;
@@ -101,5 +102,11 @@
     color: #555;
     line-height: 1.6;
     margin: 5px 0;
+  }
+  .student-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+    margin-top: 10px;
   }
   
