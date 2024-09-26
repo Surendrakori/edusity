@@ -80,7 +80,7 @@ const Details = () => {
     const student = students.find(s => s.rollNumber === rollNumber);
     if (student) {
       const doc = new jsPDF(); // Create a new jsPDF instance
-
+  
       // Create the content of the certificate
       const certificateText = `
         Certificate of Completion
@@ -89,19 +89,26 @@ const Details = () => {
         Course: ${student.course}
         Year: ${student.year}
       `;
-
+  
       // Add the text to the PDF document
       doc.text(certificateText, 10, 10);
-
-      // Add the image to the PDF document
-      doc.addImage(student.image, 'JPEG', 10, 30, 50, 50); // Add image to PDF (position and size can be adjusted)
-
+  
+      // Get the page width to position the image in the top right corner
+      const pageWidth = doc.internal.pageSize.width;
+      const imageWidth = 50; // Width of the image
+      const imageHeight = 50; // Height of the image
+      const margin = 10; // Margin from the top and right edges
+  
+      // Add the image to the PDF document at the top right corner with a margin of 100px
+      doc.addImage(student.image, 'JPEG', pageWidth - imageWidth - margin, margin, imageWidth, imageHeight);
+  
       // Save the generated PDF document
       doc.save(`${student.name}_Certificate.pdf`);
     } else {
       alert('No user found');
     }
   };
+  
 
   const handleBack = () => {
     navigate('/');
