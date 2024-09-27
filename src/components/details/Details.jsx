@@ -78,19 +78,31 @@ const Details = () => {
     }
   };
 
-  const handleDownload = () => {
-    const student = students.find(s => s.rollNumber === rollNumber);
-    if (student) {
-      const link = document.createElement('a');
-      link.href = student.certificate; // Path to the student's certificate image
-      link.download = `certificate.png`; // Suggested file name for the download
-      link.click(); // Trigger the download
-    } else {
-      alert('No user found');
-    }
-  };
-  
-  
+
+const handleDownload = () => {
+  const student = students.find(s => s.rollNumber === rollNumber);
+  if (student) {
+    const doc = new jsPDF();
+
+    // Load the student's certificate image and add it to the PDF
+    const img = new Image();
+    img.src = student.certificate; // Path to the student's certificate image
+    
+    img.onload = () => {
+      const pageWidth = doc.internal.pageSize.getWidth();
+      const pageHeight = doc.internal.pageSize.getHeight();
+
+      // Add the certificate image to the PDF with full width and height
+      doc.addImage(img, 'PNG', 0, 0, pageWidth, pageHeight);
+
+      // Save the generated PDF with the certificate
+      doc.save(`${student.name}_Certificate.pdf`);
+    };
+  } else {
+    alert('No user found');
+  }
+};
+
 
   const handleBack = () => {
     navigate('/');
