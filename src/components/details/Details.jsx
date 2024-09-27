@@ -6,12 +6,13 @@ import student1 from '../../assets/user-1.png';
 import student2 from '../../assets/user-2.png';
 import student3 from '../../assets/user-3.png';
 import student4 from '../../assets/user-4.png';
+import studentCerificate from '../../assets/certificate.png'
 
 const Details = () => {
   const students = [
     {
       rollNumber: "111",
-      name: "John Doe",
+      name: "Emily Davis",
       course: "Computer Science",
       year: "2023",
       address: "123 Main St, Cityville",
@@ -19,7 +20,8 @@ const Details = () => {
       yop: "2023",
       email: "johndoe@example.com",
       phone: "123-456-7890",
-      image: student1
+      image: student1,
+      certificate:studentCerificate 
     },
     {
       rollNumber: "222",
@@ -47,7 +49,7 @@ const Details = () => {
     },
     {
       rollNumber: "444",
-      name: "Emily Davis",
+      name: "John Doe",
       course: "Chemistry",
       year: "2023",
       address: "101 Pine Rd, Hamletown",
@@ -79,35 +81,15 @@ const Details = () => {
   const handleDownload = () => {
     const student = students.find(s => s.rollNumber === rollNumber);
     if (student) {
-      const doc = new jsPDF(); // Create a new jsPDF instance
-  
-      // Create the content of the certificate
-      const certificateText = `
-        Certificate of Completion
-        ----------------------------
-        Name: ${student.name}
-        Course: ${student.course}
-        Year: ${student.year}
-      `;
-  
-      // Add the text to the PDF document
-      doc.text(certificateText, 10, 10);
-  
-      // Get the page width to position the image in the top right corner
-      const pageWidth = doc.internal.pageSize.width;
-      const imageWidth = 50; // Width of the image
-      const imageHeight = 50; // Height of the image
-      const margin = 10; // Margin from the top and right edges
-  
-      // Add the image to the PDF document at the top right corner with a margin of 100px
-      doc.addImage(student.image, 'JPEG', pageWidth - imageWidth - margin, margin, imageWidth, imageHeight);
-  
-      // Save the generated PDF document
-      doc.save(`${student.name}_Certificate.pdf`);
+      const link = document.createElement('a');
+      link.href = student.certificate; // Path to the student's certificate image
+      link.download = `certificate.png`; // Suggested file name for the download
+      link.click(); // Trigger the download
     } else {
       alert('No user found');
     }
   };
+  
   
 
   const handleBack = () => {
