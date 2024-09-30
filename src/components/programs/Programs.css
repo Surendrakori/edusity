@@ -1,52 +1,69 @@
-.programs{
-    margin: 80px auto;
-    width:90%;
-    display:flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.program img{
-    width:100%;
-    border-radius: 10px;
-    display: block;
-}
-.program{
-    flex-basis: 31%;
-    position:relative;
-}
-.caption{
-    border-radius: 10px;
+/* Programs.css */
+
+/* General slider styles */
+.program-slider {
+    margin-top: 80px;
+  }
+  
+  .course-card {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto; /* This sets both left and right margins to 0 */
+  }
+  
+  .course-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(70, 70, 70, 0.7);
+  }
+  
+  .overlay {
     position: absolute;
-    top:0;
-    left:0;
-    bottom:0;
-    right:0;
-    background: rgba(0,15,152,0.3);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
-    color:#fff;
-    cursor:pointer;
-    opacity:0;
-    padding-top: 70%;
-    transition:0.4s;
-}
-.caption img{
-    width:60px;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .course-card:hover .overlay {
+    opacity: 1;
+  }
+  
+  .course-title {
+    font-family: 'Sans-serif';
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
     margin-bottom: 10px;
-}
-.program:hover .caption{
-    opacity:1;
-    padding-top:0;
-}
-/* ---Media Query ---*/
-@media (max-width: 650px){
-    .programs{
-        flex-direction:column;
-        margin: 20px;
-    }
-}
-
-
-
+  }
+  
+  .course-description {
+    font-family: 'Serif';
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .course-button {
+    border: 2px solid #000080;
+    background-color: #000080;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .course-button:hover {
+    background-color: #0044cc;
+    border-color: #0044cc;
+  }
+  

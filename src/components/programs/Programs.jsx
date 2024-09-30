@@ -1,38 +1,75 @@
-import React from 'react'
-import './Programs.css'
-import program_1 from '../../assets/program-1.png'
-import program_2 from '../../assets/program-2.png'
-import program_3 from '../../assets/program-3.png'
-import program_icon_1 from '../../assets/program-icon-1.png'
-import program_icon_2 from '../../assets/program-icon-2.png'
-import program_icon_3 from '../../assets/program-icon-3.png'
+import React from 'react';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import img1 from '../../assets/img1.jpeg';
+import img2 from '../../assets/img2.jpeg';
+import img3 from '../../assets/img3.jpeg';
+import img4 from '../../assets/img4.jpeg';
+import img5 from '../../assets/img5.jpeg';
+import img6 from '../../assets/img6.jpeg';
+import './Programs.css'; // Import the CSS file
 
 const Programs = () => {
-  return (
-    <div className='programs'>
-        <div className="program">
-            <img src={program_1} alt="" />
-            <div className="caption">
-                <img src={program_icon_1} alt="" />
-                <p>Graduation Degree</p>
-            </div>
-        </div>
-        <div className="program">
-            <img src={program_2} alt="" />
-            <div className="caption">
-                <img src={program_icon_2} alt="" />
-                <p>Masters Degree</p>
-            </div>
-        </div>
-        <div className="program">
-            <img src={program_3} alt="" />
-            <div className="caption">
-                <img src={program_icon_3} alt="" />
-                <p>Post Graduation</p>
-            </div>
-        </div>
-    </div>
-  )
-}
+  const courses = [
+    {
+      img: img1,
+      title: "C/C++",
+      description: 'Lorem ipsum dolor sit amet.',
+    },
+    {
+      img: img2,
+      title: "Java",
+      description: 'Lorem ipsum dolor sit amet.',
+    },
+    {
+      img: img3,
+      title: "Multi Media",
+      description: 'Lorem ipsum dolor sit amet.',
+    },
+    {
+      img: img4,
+      title: "Oracle",
+      description: 'Lorem ipsum dolor sit amet.',
+    },
+    {
+      img: img5,
+      title: "Ms Office",
+      description: 'Lorem ipsum dolor sit amet.',
+    },
+    {
+      img: img6,
+      title: "Web Development",
+      description: 'Lorem ipsum dolor sit amet.',
+    },
+  ];
 
-export default Programs
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    pauseOnHover: true,
+    swipeToSlide: true,
+  };
+
+  return (
+    <Slider {...settings} className="program-slider">
+      {courses.map((course, index) => (
+        <div className="course-card" key={index}>
+          <img src={course.img} alt={course.title} className="course-image" />
+          <div className="overlay">
+            <h2 className="course-title">{course.title}</h2>
+            <p className="course-description">{course.description}</p>
+            <button className="course-button">View Course</button>
+          </div>
+        </div>
+      ))}
+    </Slider>
+  );
+};
+
+export default Programs;
