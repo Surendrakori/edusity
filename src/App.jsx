@@ -8,7 +8,8 @@ import Testimonials from './components/testimonials/Testimonials';
 import Contact from './components/contact/Contact';
 import Footer from './components/footer/Footer';
 import VideoPlayer from './components/videoplayer/VideoPlayer';
-import Details from './components/details/Details';
+// import Details from './components/details/Details';
+import Certificate from './components/certificate/Certificate';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 const App = () => {
@@ -42,7 +43,8 @@ const App = () => {
             } 
           />
           {/* Route for the /details page */}
-          <Route path="/details" element={<Details />} />
+          {/* <Route path="/details" element={<Details />} /> */}
+          <Route path="/certificate" element={<Certificate />} />
         </Routes>
       </Router>
     </div>

@@ -1,0 +1,226 @@
+/* Centering the content within the certificate section */
+#certificate {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* Style for the search bar (input) */
+  .search-bar {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    margin: 10px auto;
+    border: 2px solid #212EA0;
+    border-radius: 25px;
+    font-size: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    outline: none;
+    transition: all 0.3s ease;
+  }
+  
+  .search-bar:focus {
+    border-color: #212EA0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Style for the View Certificate Button */
+  .view-button {
+    background-color: #212EA0;
+    color: white;
+    padding: 12px 25px;
+    margin: 15px 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .view-button:hover {
+    background-color: #212EA0;
+  }
+  
+  /* Style for the Download Certificate Button */
+  .download-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 25px;
+    margin: 15px 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .download-button:hover {
+    background-color: #45a049;
+  }
+  
+  /* General Button Styles */
+  button {
+    margin-bottom: 20px;
+  }
+  
+  /* Existing certificate styles remain unchanged */
+  .certificate {
+    width: 850px;
+    padding: 20px;
+    border: 10px solid #212EA0;
+    background-color: white;
+    margin: 20px auto;
+    font-family: 'Arial', sans-serif;
+    position: relative;
+  }
+  
+  .certificate-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .logo-image {
+    width: 70px;
+    height: 100px;
+    margin-top: -80px;
+  }
+  
+  .logo {
+    width: 120px;
+  }
+  
+  .logos {
+    margin-top: 100px;
+  }
+  
+  .company-info {
+    text-align: left;
+    padding-left: 20px;
+    flex-basis: 50%;
+  }
+  
+  .company-name {
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .company-slogan {
+    font-size: 14px;
+    color: #888;
+  }
+  
+  .contact-info {
+    text-align: left;
+    font-size: 14px;
+  }
+  
+  .header-line {
+    border: none;
+    border-top: 2px solid black;
+    margin: 10px 0;
+  }
+  
+  .certificate-main-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .certificate-number-and-logos {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 10px;
+  }
+  
+  .certificate-number {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  
+  .certificate-title {
+    text-align: center;
+    flex: 1;
+  }
+  
+  .certificate-main {
+    font-size: 40px;
+    font-family: 'Cursive';
+    color: #212EA0;
+    margin: 0;
+    padding: 10px;
+    font-style: italic;
+  }
+  
+  .certificate-sub {
+    font-size: 20px;
+    font-family: 'Arial';
+    color: black;
+    margin-top: -10px;
+  }
+  
+  .image-right {
+    flex: 1;
+    text-align: right;
+  }
+  
+  .profile-pic {
+    width: 150px;
+    height: auto;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .certificate-details-full {
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+    justify-content: space-around;
+  }
+  
+  .certificate-footer {
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .signature-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .signature-image {
+    width: 100px;
+    margin-right: 10px;
+  }
+  
+  .signature-text {
+    margin-right: 10px;
+    font-weight: bold;
+  }
+  
+  .tick-logo {
+    width: 150px;
+  }
+  
+  .certificate-footer p {
+    font-size: 20px;
+    margin: 5px 0;
+    font-style: italic;
+    padding: 10px;
+  }
+  
