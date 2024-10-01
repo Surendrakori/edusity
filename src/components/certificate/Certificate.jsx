@@ -7,20 +7,45 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faEnvelope, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 
 import logo from '../../assets/header.png';  // Import the logo
-import profilePic from '../../assets/profile.jpg';  // Import the profile picture
 import signatureImg from '../../assets/signature.png';  // Import the signature image
 import tickLogo from '../../assets/tick.jpg';  // Import the tick logo
 import name from '../../assets/name.jpg';
 
+import img1 from '../../assets/user-1.png'
+import img2 from '../../assets/user-2.png'
+import img3 from '../../assets/user-3.png'
+
+
 const certificates = {
   '1': {
-    applicantName: 'MD FAROOQ',
+    applicantName: 'Aara begum',
     fatherName: 'MD SHAKEEL',
     motherName: 'SHAHAADHA BEGUM',
     courseName: 'C++',
     courseDuration: '90 Days',
     grade: 'A+',
     date: '17-04-2024',
+    image:img1
+  },
+  '3': {
+    applicantName: 'Leela',
+    fatherName: 'Rama rao',
+    motherName: 'Lakshmi',
+    courseName: 'Java',
+    courseDuration: '90 Days',
+    grade: 'A+',
+    date: '17-04-2024',
+    image:img3
+  },
+  '2': {
+    applicantName: 'Mahesh',
+    fatherName: 'Krishna',
+    motherName: 'Viajya nirmala',
+    courseName: 'AI',
+    courseDuration: '90 Days',
+    grade: 'A+',
+    date: '05-09-2024',
+    image:img2
   },
 };
 
@@ -101,7 +126,7 @@ const Certificate = () => {
               <p className="certificate-sub">of Course Completion</p>
             </div>
             <div className="image-right">
-              <img src={profilePic} alt="Profile Picture" className="profile-pic" />
+              <img src={certificateData.image} alt="Profile Picture" className="profile-pic" />
             </div>
           </div>
 

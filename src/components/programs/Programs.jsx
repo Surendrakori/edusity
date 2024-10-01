@@ -57,7 +57,8 @@ const Programs = () => {
   };
 
   return (
-    <Slider {...settings} className="program-slider">
+    <div className='programs'>
+    <Slider {...settings} className="program-slider"  >
       {courses.map((course, index) => (
         <div className="course-card" key={index}>
           <img src={course.img} alt={course.title} className="course-image" />
@@ -69,6 +70,7 @@ const Programs = () => {
         </div>
       ))}
     </Slider>
+    </div>
   );
 };
 

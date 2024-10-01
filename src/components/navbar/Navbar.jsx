@@ -31,8 +31,8 @@ const Navbar = () => {
         <li><ScrollLink to='programs' smooth={true} offset={-260} duration={500}>Programs</ScrollLink></li>
         <li><ScrollLink to='about' smooth={true} offset={-150} duration={500}>About Us</ScrollLink></li>
         <li><ScrollLink to='testimonials' smooth={true} offset={-260} duration={500}>Testimonials</ScrollLink></li>
-        <li><ScrollLink to='contact' smooth={true} offset={-260} duration={500} className='btn'>Contact us</ScrollLink></li>
-        <li><Link to='/certificate'>Download Certificate</Link></li>
+        <li><ScrollLink to='contact' smooth={true} offset={-260} duration={500} >Contact us</ScrollLink></li>
+        <li><Link to='/certificate' className='btn'>Download Certificate</Link></li>
       </ul>
       <img src={menu_icon} alt="menu" className='menu-icon' onClick={toggleMenu} />
     </nav>
